@@ -1,0 +1,7 @@
+Step 1: Find the frequency of each letter
+
+worst case: 3 runs
+
+'R', 'M', 'T', 'I'
+
+Need: Set to track guessed string
