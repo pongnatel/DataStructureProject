@@ -12,3 +12,6 @@ Step 3: Loop through each position in the test string and find the correct lette
         
 ### Testing
 Has an average of 24.5 guesses for 1000 runs
+
+### Files
+### SecretKeyGuess2 is the main solution
