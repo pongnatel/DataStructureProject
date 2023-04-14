@@ -8,10 +8,13 @@ Step 1: Find the frequency of each letter in the correct password (e.g 'R':1 | '
 Step 2: Create a test string for guessing, and always fill it with the max_freq_char
 
 Step 3: Loop through each position in the test string and find the correct letter in correct position.
-        For each postion, the worse case is 3 guesses (can be optimized to 2 guesses)
+        For each position, always prioritize letter from more to less frequency
         
 ### Testing
-Has an average of 24.5 guesses for 1000 runs
+- Has an average of 20.9 guesses for 1000 runs
+- Never exceed 26 guesses for a password
 
-### Files
- SecretKeyGuess2 is the main solution
+### Implementation
+- Object Letter is used to store the character and its frequency
+- Object LetterArray is used to store all letters used to guess, providing sorting function, gettter, add, minus frequency... 
+- Class SecreKeyGuess to perform the guessing
