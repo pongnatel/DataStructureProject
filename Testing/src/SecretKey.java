@@ -1,17 +1,19 @@
 public class SecretKey {
   private String correctKey = "";
   private int counter;
-  private final char[] char_array = {'R', 'M', 'I', 'T'};
 
   private final int length = 16;
   public SecretKey() {
     // for the real test, your program will not know this
-//    correctKey = "RRRRRRRRRMITRMIT";
+//    correctKey = "IRMTTMTTTRMMIRRT";
     for (int i = 0; i < length; i++){
       int index = (int) (Math.random() * 4);
+      char[] char_array = {'R', 'M', 'I', 'T'};
       correctKey += char_array[index];
     }
     counter = 0;
+    System.out.println(correctKey);
+
   }
 
   @Override
@@ -41,9 +43,9 @@ public class SecretKey {
     return matched;
   }
 
-  public int length(){
-    return length;
-  }
+//  public int length(){
+//    return length;
+//  }
 }
 
 
