@@ -1,5 +1,5 @@
 
-public class SecretKeyGuess {
+public class SecretKeyGuesser {
     final private char[] letters = {'R','M','I','T'};
     private char max_freq_char;
     private int max_freq;
