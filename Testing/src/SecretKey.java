@@ -13,7 +13,6 @@ public class SecretKey {
     }
     counter = 0;
     System.out.println(correctKey);
-
   }
 
   @Override

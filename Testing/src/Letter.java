@@ -7,6 +7,14 @@ public class Letter {
         this.frequency = frequency;
     }
 
+    @Override
+    public String toString() {
+        return "Letter{" +
+                "letter=" + letter +
+                ", frequency=" + frequency +
+                '}';
+    }
+
     public char getLetter() {
         return letter;
     }
