@@ -9,12 +9,13 @@ public class SecretKey {
 
 //    correctKey = "RRRRRRRRRRRRRRRR";
 //
-    correctKey = "EEE";
+//    correctKey = "EEE";
 //
 //    correctKey = "RRRRRRRMMMMMMIRF";
 
-//    correctKey = "RRRFRRRMMMMMMIRT";
+//    correctKey = "RTMRMIRIMRTMIITM";
 //
+    correctKey = "MRITIIMIMTIMTTMR";
 
 //    for (int i = 0; i < length; i++){
 //      int index = (int) (Math.random() * 4);
