@@ -24,6 +24,8 @@ public class SecretKeyGuesser {
         for(int index = 0; index < length; index++){
             flag = false;
 
+            System.out.println(index);
+
             //this one loops through the letter array
             for(int i = 0; i <= letterArray.getLastAvailableElement() && !flag; i++){
                 char guessLetter = letterArray.getLetterByIndex(i);
@@ -40,8 +42,8 @@ public class SecretKeyGuesser {
                     // Reset the last available element
                     if(letterArray.getFreqByIndex(i) == 0) {
                         letterArray.sortDescending();
-                        System.out.println("Sorted");
-                        letterArray.print();
+//                        System.out.println("Sorted");
+//                        letterArray.print();
                     }
                     continue; // Move to next position
                 }
@@ -50,13 +52,18 @@ public class SecretKeyGuesser {
                 if(guessLetter != max_freq_char){
                     guessString = changeLetter(guessString, guessLetter, index);
 
-                    System.out.println(guessString);
+//                    System.out.println(guessString);
 
                     int result = secretKey.guess(guessString); // Do the guessing
                     counter++; // Used to count performance to remove later
 
                     // Stop when we got 16 matches
-                    if(result == 16) return;
+                    if(result == 16) {
+
+                        System.out.println("Final Guess String: " + guessString);
+                        return;
+
+                    }
 
                     // Case 1: the original letter (max_freq_char) is correct
                     if(result < max_guess){
@@ -68,8 +75,8 @@ public class SecretKeyGuesser {
                         if(letterArray.getFreqByIndex(0) < letterArray.getFreqByIndex(1)) {
                             letterArray.sortDescending(); // Sorting
 
-                            System.out.println("Sorted");
-                            letterArray.print();
+//                            System.out.println("Sorted");
+//                            letterArray.print();
 
                             max_freq_char = letterArray.getLetterByIndex(0); // Reset max_freq_char
                             max_guess = max_guess + letterArray.getFreqByIndex(0) - max_freq; // Update max_guess
@@ -85,8 +92,10 @@ public class SecretKeyGuesser {
                         letterArray.deductFrequency(i); //
                         letterArray.sortDescending();
 
-                        System.out.println("Sorted");
-                        letterArray.print();
+//                        System.out.println(guessString);
+//
+//                        System.out.println("Sorted");
+//                        letterArray.print();
 
                         max_guess = result;
                         flag = true;
@@ -97,6 +106,7 @@ public class SecretKeyGuesser {
 
         // This one is for some strings that are completed before calling the last guess method.
         secretKey.guess(guessString);
+//        System.out.println("Final Guess String: " + guessString);
         counter++;
     }
 
@@ -129,8 +139,8 @@ public class SecretKeyGuesser {
         // Sort by frequency
         result.sortDescending();
 
-        System.out.println("Sorted");
-        result.print();
+//        System.out.println("Sorted");
+//        result.print();
 
         // Store the max frequency char and its frequency
         max_freq_char = result.getLetterByIndex(0);

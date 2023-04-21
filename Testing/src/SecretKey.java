@@ -17,13 +17,15 @@ public class SecretKey {
 //
     correctKey = "MRITIIMIMTIMTTMR";
 
+//    correctKey = "RRMMMITRMTMIMITI";
+
 //    for (int i = 0; i < length; i++){
 //      int index = (int) (Math.random() * 4);
 //      char[] char_array = {'R', 'M', 'I', 'T'};
 //      correctKey += char_array[index];
 //    }
 //    counter = 0;
-//    System.out.println(correctKey);
+//    System.out.println("Correct Key: " + correctKey);
 
 //    validate the correct key
     validate(correctKey);
