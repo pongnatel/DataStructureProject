@@ -38,8 +38,11 @@ public class SecretKeyGuesser {
                     max_guess++;
 
                     // Reset the last available element
-                    if(letterArray.getFreqByIndex(i) == 0) letterArray.sortDescending();
-                    continue; // Move to next position
+                    if(letterArray.getFreqByIndex(i) == 0)
+                        letterArray.sortDescending();
+
+                    // Move to next position
+                    continue;
                 }
 
                 // Only check if the letter is different from the current letter at this position
