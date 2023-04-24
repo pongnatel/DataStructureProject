@@ -4,8 +4,9 @@ public class SecretKey {
 
   private final int length = 16;
   public SecretKey() {
-    // for the real test, your program will not know this
-//    correctKey = "IRMTTMTTTRMMIRRT";
+    // For the real test, your program will not know this
+    // This loop randomly generates a combination of 16 characters from an array of characters
+    // This is only for testing
     for (int i = 0; i < length; i++){
       int index = (int) (Math.random() * 4);
       char[] char_array = {'R', 'M', 'I', 'T'};
@@ -41,14 +42,5 @@ public class SecretKey {
     }
     return matched;
   }
-
-//  public int length(){
-//    return length;
-//  }
 }
 
-
-//  public static void main(String[] args) {
-//    new SecretKeyGuesser().start();
-//  }
-//}
