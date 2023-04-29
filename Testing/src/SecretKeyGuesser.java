@@ -1,10 +1,12 @@
-
-public class SecretKeyGuesser {
+ public class SecretKeyGuesser {
     final private char[] letters = {'R','M','I','T'};
     private char max_freq_char;
     private int max_freq;
     final private int length = 16;
+
+    // this attribute is used for evaluation
     int counter = 0;
+
 
     public void start(){
         SecretKey secretKey = new SecretKey();
@@ -25,13 +27,12 @@ public class SecretKeyGuesser {
             flag = false;
 
             //this one loops through the letter array
-            for(int i = 0; i <= letterArray.getLastAvailableElement() && !flag; i++){
+            for(int i = 0; i <= letterArray.getLastAvailableLetter() && !flag; i++){
                 char guessLetter = letterArray.getLetterByIndex(i);
 
-                // Apply prunning
                 // Stop when we are sure this letter is correct,
                 // So we move to next position without calling guess method
-                if(i == letterArray.getLastAvailableElement() && i > 1){
+                if(i == letterArray.getLastAvailableLetter() && i > 1){
                     guessString = changeLetter(guessString, guessLetter, index);
                     letterArray.deductFrequency(i);
                     flag = true;

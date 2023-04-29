@@ -1,7 +1,7 @@
 public class LetterArray {
     private Letter[] array;
     private int size;
-    private int lastAvailableElement;
+    private int lastAvailableLetter;
 
     // Constructor for LetterArray class, accepting 1 attribute which is the size of the array of unique letters
     public LetterArray(int size) {
@@ -38,12 +38,12 @@ public class LetterArray {
             // To improve the performance of the program
             if(array[i].getFrequency() == 0) {
                 // Set the lastAvailableElement to the index of the last non-zero frequency
-                lastAvailableElement = i - 1;
+                lastAvailableLetter = i - 1;
                 return;
             }
         }
         // If all frequencies are non-zero, set the lastAvailableElement to the last index
-        lastAvailableElement = array.length - 1;
+        lastAvailableLetter = array.length - 1;
     }
 
     // This method uses the Merge Sort approach to sort the array of Letter objects based on their frequency,
@@ -129,7 +129,7 @@ public class LetterArray {
 
     // Getter for the last available element in the array of Letter objects
     // Return an integer
-    public int getLastAvailableElement() {
-        return lastAvailableElement;
+    public int getLastAvailableLetter() {
+        return lastAvailableLetter;
     }
 }
