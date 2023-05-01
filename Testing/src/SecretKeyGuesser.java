@@ -8,7 +8,7 @@
     int counter = 0;
 
 
-    public void start(){
+    public void start() throws Exception {
         SecretKey secretKey = new SecretKey();
 
         // Count the frequency of each letter
@@ -52,8 +52,11 @@
                     int result = secretKey.guess(guessString); // Do the guessing
                     counter++; // Used to count performance to remove later
 
+                    if(result == -1 ){
+                        throw new Exception("Invalid guessed key!");
+                    }
                     // Stop when we got 16 matches
-                    if(result == 16) return;
+                    if(result == length) return;
 
                     // Case 1: the original letter (max_freq_char) is correct
                     if(result < max_guess){

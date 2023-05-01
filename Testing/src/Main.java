@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception {
         int max = 0;
 
         // Try 100000 different passwords
