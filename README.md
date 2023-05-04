@@ -1,5 +1,7 @@
 # DataStructureProject
 
+# Link Youtube: https://www.youtube.com/watch?v=2L4l7DIF1zY
+
 ### Idea: 
 
 Step 1: Find the frequency of each letter in the correct password (e.g 'R':1 | 'M':5 | 'I':8 | 'T':2)
