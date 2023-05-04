@@ -20,3 +20,9 @@ Step 3: Loop through each position in the test string and find the correct lette
 - Object Letter is used to store the character and its frequency
 - Object LetterArray is used to store all letters used to guess, providing sorting function, gettter, add, minus frequency... 
 - Class SecreKeyGuess to perform the guessing
+
+### Contribution Scores
+- Nguyen Minh Quan - s3927181: 3
+- Ngo Tran Bao Thach - s3927021: 3
+- Le Tan Phong - s3877819: 3
+- Nguyen Cong Gia Hien - s3884308: 3
