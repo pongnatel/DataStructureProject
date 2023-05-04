@@ -21,7 +21,6 @@ To implement our algorithm, we used the following objects and classes:
 - The `SecretKeyGuess` class performs the guessing.
 
 ## Contribution Scores
-We are proud to present the contribution scores of our team members:
 - Nguyen Minh Quan - s3927181: **3**
 - Ngo Tran Bao Thach - s3927021: **3**
 - Le Tan Phong - s3877819: **3**
