@@ -78,7 +78,7 @@
 
                     // Case 2: the new letter is correct
                     else if (result > max_guess) {
-                        letterArray.deductFrequency(i); //
+                        letterArray.deductFrequency(i);
                         letterArray.sortDescending();
                         max_guess = result;
                         flag = true;
@@ -142,11 +142,10 @@
     // e.g "RRRRR" -> "RTTTT" (starting from index = 1)
     private String changeAllLetter(String s, char c, int index){
         int rightSub = s.length() - index;
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < rightSub; i++){
-            result.append(c);
+        String result = s.substring(0,index);
+        for(int i = 0; i < rightSub; i++){
+            result += c;
         }
-        result.insert(0, s.substring(0, index));
-        return result.toString();
+        return result;
     }
 }
